@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Faculdade</string>
+    <string name="chamar_camera">Chamar camera</string>
+    <string name="tirar_foto">Tirar Foto</string>
+    <string name="button">Escrever Aviso</string>
+    <string name="criar_aviso">Criar aviso</string>
+    <string name="cria_texto">Escrever</string>
+    <string name="salvar_txt">Salvar</string>
+    <string name="salvar">Salvar</string>
+    <string name="Salvar">salvar</string>
+    <string name="salvar">Salvar</string>
+    <string name="escrever">escrever</string>
+    <string name="limpar">Limpar</string>
+</resources>
