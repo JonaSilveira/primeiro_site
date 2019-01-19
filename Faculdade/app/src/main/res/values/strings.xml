@@ -6,9 +6,15 @@
     <string name="criar_aviso">Criar aviso</string>
     <string name="cria_texto">Escrever</string>
     <string name="salvar_txt">Salvar</string>
-    <string name="salvar">Salvar</string>
     <string name="Salvar">salvar</string>
-    <string name="salvar">Salvar</string>
     <string name="escrever">escrever</string>
+    <string name="titulo">Titulo</string>
+    <string name="save">Salvar</string>
     <string name="limpar">Limpar</string>
+    <string name="textview">TextView</string>
+    <string name="name">Nome</string>
+    <string name="raiz">Caminho do Diretorio:</string>
+    <string name="texto_do_arquivo_a_ser_salvo">Texto do arquivo a ser salvo:</string>
+    <string name="salvar">Salvar</string>
+    <string name="abrir">Abrir</string>
 </resources>

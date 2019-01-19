@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:id="@+id/raiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caminho do Diretorio" />
+
+    <EditText
+        android:id="@+id/edtNomeArq"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType=""
+        android:autofillHints="" />
+
+    <TextView
+        android:text="@string/texto_do_arquivo_a_ser_salvo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edtSalvar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/salvar" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/limpar" />
+    </LinearLayout>
+</LinearLayout>
