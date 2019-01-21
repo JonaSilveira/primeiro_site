@@ -17,4 +17,6 @@
     <string name="texto_do_arquivo_a_ser_salvo">Texto do arquivo a ser salvo:</string>
     <string name="salvar">Salvar</string>
     <string name="abrir">Abrir</string>
+    <string name="caminho_do_diretorio">Caminho do Diretorio</string>
+    <string name="avisos">avisos</string>
 </resources>

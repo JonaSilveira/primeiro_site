@@ -1,7 +1,11 @@
 package com.example.jonas.faculdade;
 
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.os.Bundle;import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
@@ -9,30 +13,21 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
-
-public class AvisoActivity extends AppCompatActivity {
-
-    TextView raiz, salva, escreve, nometxt;
-
+public class Avisos extends AppCompatActivity {
+    TextView nometxt, salva, raiz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try {
-            setContentView(R.layout.activity_aviso);
-            raiz = (TextView)findViewById(R.id.raiz);
-            nometxt = (TextView)findViewById(R.id.edtNomeArq);
-            salva = (TextView)findViewById(R.id.edtSalvar);
+        setContentView(R.layout.activity_avisos);
+        raiz  = (TextView)findViewById(R.id.raiz);
+        nometxt = (TextView)findViewById(R.id.edtNomeArq);
+        salva = (TextView)findViewById(R.id.edtSalvar);
 
-            raiz.append(GetRoot());
-
-        }
-        catch(Exception e){
-            System.out.println("Erro: "+ e.getMessage());
-        }
+        raiz.append(GetRoot());
 
     }
+
+
 
     public void ClickLimpar(View v){
         nometxt.setText("");
@@ -40,6 +35,9 @@ public class AvisoActivity extends AppCompatActivity {
     }
 
     public void ClicSalvar (View v) {
+        nometxt.setText("");
+        salva.setText("");
+        System.out.println("salvo");
         Salvar();
     }
 
@@ -58,6 +56,7 @@ public class AvisoActivity extends AppCompatActivity {
             arquivo = new File(Environment.getExternalStorageDirectory(), lerNomeTxt);
             FileOutputStream out;
             out = new FileOutputStream(arquivo);
+            out.write(salva.getText().toString().getBytes());
             out.flush();
             out.close();
         }
@@ -65,4 +64,5 @@ public class AvisoActivity extends AppCompatActivity {
             System.out.println(e.getMessage());
         }
     }
+
 }

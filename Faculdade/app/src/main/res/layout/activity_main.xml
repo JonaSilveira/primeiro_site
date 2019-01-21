@@ -12,7 +12,7 @@
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentStart="true"
+
         android:layout_alignParentTop="true"
         android:contentDescription="@android:string/VideoView_error_button" />
 
@@ -35,20 +35,20 @@
 
     <Button
         android:id="@+id/botaoaviso"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/botaocamera"
-        android:layout_alignLeft="@+id/botaocamera"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="296dp"
-        android:layout_marginLeft="296dp"
+        android:layout_marginStart="305dp"
+        android:layout_marginLeft="305dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="6dp"
         android:background="@android:color/black"
-        android:text="@string/criar_aviso"
+        android:text="@string/avisos"
         android:textColor="@android:color/holo_red_dark" />
 
 

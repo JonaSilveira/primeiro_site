@@ -40,8 +40,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v){
-        Intent it = new Intent(this, AvisoActivity.class);
+        System.out.println("fimcopkffmmfqknjfçehawjra vmrhjnapeorivnjhriogvnaerionjtaseçritgvjnaseçrlijnaçselrmvsjerinjsçriomnjgsçnyhsçoiysjçtsjtoiybmsçtoiybjsçtioyjijyjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+        Intent it = new Intent(this, Avisos.class);
         startActivity(it);
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
 }
