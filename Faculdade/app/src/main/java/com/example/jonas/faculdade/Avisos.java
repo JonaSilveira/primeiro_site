@@ -5,11 +5,14 @@ import android.os.Bundle;import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,9 +23,14 @@ public class Avisos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avisos);
         raiz  = (TextView)findViewById(R.id.raiz);
-        nometxt = (TextView)findViewById(R.id.edtNomeArq);
-        salva = (TextView)findViewById(R.id.edtSalvar);
-
+        nometxt = (EditText)findViewById(R.id.edtNomeArq);
+        salva = (EditText)findViewById(R.id.edtSalvar);
+        System.out.println(nometxt);
+        System.out.println(nometxt.getText());
+        System.out.println(nometxt.getText().toString());
+        System.out.println(salva);
+        System.out.println(salva.getText());
+        System.out.println(salva.getText().toString());
         raiz.append(GetRoot());
 
     }
@@ -48,17 +56,21 @@ public class Avisos extends AppCompatActivity {
 
     private void Salvar(){
         String lerNomeTxt;
-        File arquivo;
-        byte[] dadod;
+        //File arquivo;
+        //byte[] dados;
         try{
             //pega o nome do arquivo a ser gravado
+            System.out.println("dsddddd"+ nometxt.getText().toString());
             lerNomeTxt = nometxt.getText().toString();
-            arquivo = new File(Environment.getExternalStorageDirectory(), lerNomeTxt);
-            FileOutputStream out;
-            out = new FileOutputStream(arquivo);
-            out.write(salva.getText().toString().getBytes());
-            out.flush();
-            out.close();
+            System.out.println("ddddd"+lerNomeTxt);
+            FileWriter fw = new FileWriter("/mnt/sdcard/x/"+lerNomeTxt+".txt");
+            PrintWriter pw = new PrintWriter(fw);
+            pw.println(salva.getText().toString());
+            System.out.println(lerNomeTxt.toString()+"    "+salva.getText()+"jonas kkk");
+            pw.flush();
+            pw.close();
+            System.out.println("Encerrou");
+
         }
         catch (Exception e){
             System.out.println(e.getMessage());
